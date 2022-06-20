@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DVD implements Play{
+	ArrayList<String> scenes = new ArrayList<>();
+
+	
+	public DVD() {
+		
+	}
+
+	@Override
+	public void play(ArrayList<String> scenes) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("What scene would you like to watch? ");
+//		MovieApp.selectScene(MovieList.getMovies(), scanner, MovieList.getMovies().indexOf(dvd1));
+		for (String scene : scenes) {
+			System.out.println(scene);
+		}
+
+		int sceneSelect = scanner.nextInt();
+		System.out.println(scenes.get(sceneSelect));
+		
+		scanner.close();
+	}
+}

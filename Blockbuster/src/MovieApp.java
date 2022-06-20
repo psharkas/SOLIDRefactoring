@@ -29,7 +29,8 @@ public class MovieApp {
 
 		// if yes, displays the scene and prompts for what scene to watch
 		if (answer.equalsIgnoreCase("yes")) {
-			selectScene(movies, scanner, selection);	
+			movies.get(selection-1).play();
+//			selectScene(movies, scanner, selection);	
 		}
 
 	}
@@ -60,15 +61,5 @@ public class MovieApp {
 		return selection;
 	}
 	
-	public static void selectScene(ArrayList<Movie> movies, Scanner scanner, int selection) {
-		System.out.println("Which scene of the movie would you like to watch? ");
-		for (int i = 0; i < movies.get(selection - 1).scenes.size(); i++) {
-			System.out.print("Scene " + (i + 1) + ") ");
-			System.out.println(movies.get(selection - 1).scenes.get(i));
-		}
-		int selection2 = scanner.nextInt();
-		scanner.nextLine();
-		System.out.println(
-				"Playing scene #" + selection2 + ", " + movies.get(selection - 1).scenes.get(selection2 - 1));
-	}
+
 }

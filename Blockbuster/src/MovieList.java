@@ -4,12 +4,16 @@ public class MovieList {
 	private static ArrayList<Movie> movies = new ArrayList<>();
 	
 	public static void addMovies() {
-		VHS vhs1 = new VHS();
-		VHS vhs2 = new VHS();
-		VHS vhs3 = new VHS();
-		DVD dvd1 = new DVD();
-		DVD dvd2 = new DVD();
-		DVD dvd3 = new DVD();
+		VHS vhs = new VHS();
+		DVD dvd = new DVD();
+
+		
+		Movie vhs1 = new Movie(vhs);
+		Movie vhs2 = new Movie(vhs);
+		Movie vhs3 = new Movie(vhs);
+		Movie dvd1 = new Movie(dvd);
+		Movie dvd2 = new Movie(dvd);
+		Movie dvd3 = new Movie(dvd);
 		
 		movies.add(vhs1);
 		movies.add(vhs2);
